@@ -1,0 +1,18 @@
+[
+  {
+    "id": "user_admin_ahmed",
+    "username": "Ahmed",
+    "password": "1234",
+    "displayName": "أحمد (المدير العام / أدمن)",
+    "role": "admin",
+    "branch": "كافة الفروع",
+    "allowed_branches": [
+      "عصافرة",
+      "ميامي",
+      "سان ستيفانو"
+    ],
+    "status": "active",
+    "created_at": "2026-08-24T21:44:32.555Z",
+    "created_by": "النظام"
+  }
+]

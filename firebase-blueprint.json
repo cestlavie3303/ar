@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "Payment receipt order record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "order_num": { "type": "string" },
+        "branch": { "type": "string" },
+        "wallet": { "type": "string" },
+        "work_date": { "type": "string" },
+        "payment_seq": { "type": "number" },
+        "amount": { "type": "number" },
+        "reference_num": { "type": "string" },
+        "sender_info": { "type": "string" },
+        "photo_url": { "type": "string" },
+        "image_hash": { "type": "string" },
+        "perceptual_hash": { "type": "string" },
+        "raw_ocr_text": { "type": "string" },
+        "notes": { "type": "string" },
+        "created_at": { "type": "string" },
+        "user_name": { "type": "string" }
+      },
+      "required": ["id", "order_num", "branch", "wallet", "work_date", "photo_url", "created_at"]
+    },
+    "TeamMessage": {
+      "title": "TeamMessage",
+      "description": "Internal team communication message",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "author": { "type": "string" },
+        "branch": { "type": "string" },
+        "content": { "type": "string" },
+        "created_at": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "required": ["id", "author", "content", "created_at"]
+    },
+    "AppUser": {
+      "title": "AppUser",
+      "description": "User / Employee account",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "username": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string" },
+        "branch": { "type": "string" },
+        "status": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["id", "username", "displayName", "role", "status", "created_at"]
+    }
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "#/entities/Order",
+      "description": "Collection of all branch orders and payment receipts"
+    },
+    "/team_messages/{messageId}": {
+      "schema": "#/entities/TeamMessage",
+      "description": "Team broadcast messages and announcements"
+    },
+    "/users/{userId}": {
+      "schema": "#/entities/AppUser",
+      "description": "User accounts and employee permissions"
+    }
+  }
+}

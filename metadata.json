@@ -1,0 +1,6 @@
+{
+  "name": "نظام إدارة وتوثيق إيصالات الدفع",
+  "description": "منصة ويب سحابية متكاملة لتوثيق إيصالات الدفع والتحويلات مع التعرف الذكي فائق الدقة وفلترة وتصدير الطلبات",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
